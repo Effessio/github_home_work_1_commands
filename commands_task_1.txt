@@ -1,0 +1,34 @@
+# command_list_git
+
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/Effessio/ithub_home_work_1_a.git
+git push -u origin master
+git checkout -b branch1
+# зашел в другую папку
+git clone git@github.com:Effessio/github_home_work_1_a.git ./
+git checkout -b branch1
+# создал file_c, написал в нем что-то
+git add file_c
+git commit -m "second commit"
+#вернулся в первый реп
+git pull origin branch1
+#поменял файл c
+git add file_c
+git commit -m "file c changed"
+git push
+#снова во второй реп, поменял файл с там
+git add file_c
+git commit -m "file c changed"
+git fetch -a
+git merge
+#автоматический megre не удался, разрешил конфликт, сохранил файл c
+git commit -a -m 'merge'
+git remote rm origin
+ivan@ivan-Lenovo-C440:~/hometasks/git/git_1/github_home_work$ git remote add origin git@github.com:Effessio/github_home_work_1_b.git
+git push --all origin
+#снова в первый реп
+git remote add rep_b git@github.com:Effessio/github_home_work_1_b.git
+git pull rep_b branch1
+git push origin branch1
